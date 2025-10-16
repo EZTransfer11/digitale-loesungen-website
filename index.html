@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitale Lösungen - Moderne Webentwicklung</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-sun"></i>
+                    <span>DigitaleLösungen</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Start</a></li>
+                    <li><a href="#services">Leistungen</a></li>
+                    <li><a href="#about">Über uns</a></li>
+                    <li><a href="#projects">Projekte</a></li>
+                    <li><a href="#pricing">Preise</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+                <button class="cta-button" onclick="openBookingModal()">Termin buchen</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="geometric-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+                <div class="shape shape-6"></div>
+                <div class="shape shape-7"></div>
+                <div class="shape shape-8"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="urgency-text"><span class="urgency-icon">🔥</span> Nur noch wenige Termine diese Woche verfügbar!</span>
+                </div>
+                <h1 class="hero-title">
+                    Innovieren Sie Ihre digitale Welt mit uns
+                </h1>
+                <p class="hero-description">
+                    Wir bieten maßgeschneiderte Webentwicklung, App-Entwicklung und digitale Lösungen für Ihr Unternehmen. 
+                    Schnellere Ergebnisse, bessere Performance, höchste Qualität.
+                </p>
+                <div class="social-proof">
+                    <div class="proof-item">
+                        <i class="fas fa-users"></i>
+                        <span>400+ zufriedene Kunden</span>
+                    </div>
+                    <div class="proof-item">
+                        <i class="fas fa-star"></i>
+                        <span>4.9/5 Bewertung</span>
+                    </div>
+                    <div class="proof-item">
+                        <i class="fas fa-clock"></i>
+                        <span>24h Antwortzeit</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openBookingModal()">Kostenlose Beratung buchen</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('about')">Mehr erfahren</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team working on digital solutions">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos -->
+    <section class="client-logos">
+        <div class="container">
+            <div class="logos-container">
+                <div class="logos-track">
+                    <div class="logo-item">
+                        <div class="logo-placeholder">TechCorp</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">StartupXYZ</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">InnovateLab</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">DigitalFlow</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">WebMaster</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">AppBuilder</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">CloudTech</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">DataSync</div>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="logo-item">
+                        <div class="logo-placeholder">TechCorp</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">StartupXYZ</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">InnovateLab</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">DigitalFlow</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">WebMaster</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">AppBuilder</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">CloudTech</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">DataSync</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-badge">Über uns</div>
+                    <h2 class="section-title">Unsere Reise, Vision und Werte</h2>
+                    <p class="section-description">
+                        Mit über 8 Jahren Erfahrung in der digitalen Welt haben wir uns darauf spezialisiert, 
+                        Unternehmen dabei zu helfen, ihre digitalen Ziele zu erreichen. Unsere Vision ist es, 
+                        innovative Lösungen zu schaffen, die nicht nur funktional, sondern auch benutzerfreundlich sind.
+                    </p>
+                    <button class="btn btn-primary" onclick="openBookingModal()">Kostenlose Beratung</button>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Our team">
+                    <div class="rating-overlay">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>5-Sterne-Bewertung</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Leistungen</div>
+                <h2 class="section-title">Wir bieten eine breite Palette von Design-Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>App-Entwicklung</h3>
+                    <p>Die beste Marketing-Lösung für Ihr Unternehmen finden</p>
+                    <button class="btn btn-outline" onclick="openBookingModal()">Beratung buchen</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web-Entwicklung</h3>
+                    <p>Die beste Marketing-Lösung für Ihr Unternehmen finden</p>
+                    <button class="btn btn-outline" onclick="openBookingModal()">Beratung buchen</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>System-Entwicklung</h3>
+                    <p>Die beste Marketing-Lösung für Ihr Unternehmen finden</p>
+                    <button class="btn btn-outline" onclick="openBookingModal()">Beratung buchen</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Unsere Projekte</div>
+                <h2 class="section-title">Erfolgreiche Projekte für unsere Kunden</h2>
+                <p class="section-description">Entdecken Sie einige unserer neuesten Arbeiten und sehen Sie, wie wir digitale Visionen zum Leben erwecken.</p>
+            </div>
+            
+            <!-- Project Categories -->
+            <div class="project-categories">
+                <button class="category-btn active" onclick="filterProjects('all')">Alle</button>
+                <button class="category-btn" onclick="filterProjects('web')">Web-Entwicklung</button>
+                <button class="category-btn" onclick="filterProjects('app')">App-Entwicklung</button>
+                <button class="category-btn" onclick="filterProjects('ecommerce')">E-Commerce</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80" alt="Corporate Website">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Web-Entwicklung</div>
+                        <h3>Corporate Website</h3>
+                        <p>Professionelle Unternehmenswebsite mit modernem Design und responsivem Layout für ein Technologieunternehmen.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="app">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Mobile App UI Design">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">App-Entwicklung</div>
+                        <h3>Mobile Banking App</h3>
+                        <p>Moderne mobile Banking-Anwendung mit intuitiver Benutzeroberfläche und nahtloser Benutzererfahrung.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ecommerce">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" alt="E-commerce Website">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">E-Commerce</div>
+                        <h3>Online Shop Platform</h3>
+                        <p>Komplette E-Commerce-Lösung mit Zahlungsintegration, Bestandsverwaltung und Admin-Dashboard.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">Shopify</span>
+                            <span class="tech-tag">PayPal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="SaaS Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Web-Entwicklung</div>
+                        <h3>SaaS Dashboard</h3>
+                        <p>Umfassendes Dashboard für SaaS-Anwendungen mit Analytics, Berichterstattung und Benutzerverwaltung.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="app">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Fitness App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">App-Entwicklung</div>
+                        <h3>Fitness Tracking App</h3>
+                        <p>Innovative Fitness-App mit KI-gestützten Trainingsplänen und sozialen Features für Motivation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ecommerce">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1556742111-a301076d9d18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Marketplace">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">E-Commerce</div>
+                        <h3>Multi-Vendor Marketplace</h3>
+                        <p>Plattform für mehrere Verkäufer mit erweiterten Funktionen für Verwaltung und Verkauf.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View More Button -->
+            <div class="projects-cta">
+                <button class="btn btn-outline" onclick="openBookingModal()">
+                    <i class="fas fa-plus"></i>
+                    Ihr Projekt starten
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Testimonials Section -->
+    <section class="animated-testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <h2>Kundenstimmen</h2>
+                <p>Echte Erfahrungen von zufriedenen Kunden</p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonials-column" id="testimonialsColumn1">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Die Zusammenarbeit war fantastisch! Das Team hat unsere Vision perfekt umgesetzt und dabei unsere Erwartungen übertroffen."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" alt="Sarah Müller" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Sarah Müller</div>
+                                <div class="testimonial-role">Geschäftsführerin, TechStart GmbH</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Das Team hat unsere komplexen Anforderungen verstanden und eine Lösung entwickelt, die alle unsere Ziele erreicht."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" alt="Lisa Hoffmann" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Lisa Hoffmann</div>
+                                <div class="testimonial-role">CTO, DataFlow Systems</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Professionelle Herangehensweise und kreative Lösungen. Das Team hat unsere Ideen zum Leben erweckt."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=100&h=100&fit=crop&crop=face" alt="Markus Richter" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Markus Richter</div>
+                                <div class="testimonial-role">Designer, Creative Studio</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Die Zusammenarbeit war fantastisch! Das Team hat unsere Vision perfekt umgesetzt und dabei unsere Erwartungen übertroffen."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" alt="Sarah Müller" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Sarah Müller</div>
+                                <div class="testimonial-role">Geschäftsführerin, TechStart GmbH</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Das Team hat unsere komplexen Anforderungen verstanden und eine Lösung entwickelt, die alle unsere Ziele erreicht."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" alt="Lisa Hoffmann" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Lisa Hoffmann</div>
+                                <div class="testimonial-role">CTO, DataFlow Systems</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Professionelle Herangehensweise und kreative Lösungen. Das Team hat unsere Ideen zum Leben erweckt."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=100&h=100&fit=crop&crop=face" alt="Markus Richter" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Markus Richter</div>
+                                <div class="testimonial-role">Designer, Creative Studio</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials-column" id="testimonialsColumn2">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Professionelle Arbeit und schnelle Umsetzung. Wir sind sehr zufrieden mit dem Ergebnis und der Kommunikation."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Michael Weber" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Michael Weber</div>
+                                <div class="testimonial-role">Marketing Director, Digital Solutions</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Ausgezeichnete Kommunikation und pünktliche Lieferung. Wir würden definitiv wieder mit diesem Team arbeiten."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="David Wagner" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">David Wagner</div>
+                                <div class="testimonial-role">Projektmanager, FutureTech</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Schnelle Umsetzung und hohe Qualität. Die Website lädt schnell und funktioniert auf allen Geräten einwandfrei."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=face" alt="Nicole Bauer" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Nicole Bauer</div>
+                                <div class="testimonial-role">Marketing Managerin, Retail Plus</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Professionelle Arbeit und schnelle Umsetzung. Wir sind sehr zufrieden mit dem Ergebnis und der Kommunikation."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Michael Weber" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Michael Weber</div>
+                                <div class="testimonial-role">Marketing Director, Digital Solutions</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Ausgezeichnete Kommunikation und pünktliche Lieferung. Wir würden definitiv wieder mit diesem Team arbeiten."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="David Wagner" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">David Wagner</div>
+                                <div class="testimonial-role">Projektmanager, FutureTech</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Schnelle Umsetzung und hohe Qualität. Die Website lädt schnell und funktioniert auf allen Geräten einwandfrei."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=face" alt="Nicole Bauer" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Nicole Bauer</div>
+                                <div class="testimonial-role">Marketing Managerin, Retail Plus</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials-column" id="testimonialsColumn3">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Hervorragende Beratung und Umsetzung. Das Team versteht die Bedürfnisse der Kunden und liefert qualitativ hochwertige Lösungen."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Anna Schmidt" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Anna Schmidt</div>
+                                <div class="testimonial-role">CEO, Innovation Hub</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Sehr empfehlenswert! Die Website ist nicht nur schön geworden, sondern auch funktional und benutzerfreundlich."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Thomas Klein" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Thomas Klein</div>
+                                <div class="testimonial-role">Gründer, E-Commerce Plus</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Die App ist genau das geworden, was wir uns vorgestellt haben. Benutzerfreundlich und mit allen gewünschten Features."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face" alt="Julia Fischer" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Julia Fischer</div>
+                                <div class="testimonial-role">Produktmanagerin, AppVenture</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Hervorragende Beratung und Umsetzung. Das Team versteht die Bedürfnisse der Kunden und liefert qualitativ hochwertige Lösungen."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Anna Schmidt" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Anna Schmidt</div>
+                                <div class="testimonial-role">CEO, Innovation Hub</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Sehr empfehlenswert! Die Website ist nicht nur schön geworden, sondern auch funktional und benutzerfreundlich."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Thomas Klein" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Thomas Klein</div>
+                                <div class="testimonial-role">Gründer, E-Commerce Plus</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="testimonial-text">
+                            "Die App ist genau das geworden, was wir uns vorgestellt haben. Benutzerfreundlich und mit allen gewünschten Features."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face" alt="Julia Fischer" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Julia Fischer</div>
+                                <div class="testimonial-role">Produktmanagerin, AppVenture</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">32K</div>
+                    <div class="stat-label">Bearbeitete Projekte</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">Jahre Erfahrung</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">124+</div>
+                    <div class="stat-label">Team-Mitglieder</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">400+</div>
+                    <div class="stat-label">Zufriedene Kunden</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Häufige Fragen</div>
+                <h2 class="section-title">Alles was Sie wissen müssen</h2>
+                <p class="section-description">Hier finden Sie Antworten auf die häufigsten Fragen zu unseren Dienstleistungen und dem Entwicklungsprozess.</p>
+            </div>
+            
+            <div class="faq-content">
+                <div class="faq-categories">
+                    <button class="faq-category-btn active" onclick="filterFAQ('general')">Allgemein</button>
+                    <button class="faq-category-btn" onclick="filterFAQ('development')">Entwicklung</button>
+                    <button class="faq-category-btn" onclick="filterFAQ('support')">Support</button>
+                    <button class="faq-category-btn" onclick="filterFAQ('pricing')">Kosten</button>
+                </div>
+
+                <div class="faq-grid">
+                    <!-- General FAQ -->
+                    <div class="faq-item" data-category="general">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <div class="question-content">
+                                <h3>Wie funktioniert der Entwicklungsprozess?</h3>
+                                <p>Unser strukturierter Ansatz für erfolgreiche Projekte</p>
+                            </div>
+                            <div class="question-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Unser Prozess beginnt mit einer kostenlosen Beratung, um Ihre Bedürfnisse zu verstehen. Anschließend folgen:</p>
+                                <ul>
+                                    <li><strong>Analyse & Planung:</strong> Detaillierte Projektanalyse und technische Spezifikation</li>
+                                    <li><strong>Design:</strong> UI/UX Design und Prototyping</li>
+                                    <li><strong>Entwicklung:</strong> Programmierung mit regelmäßigen Updates</li>
+                                    <li><strong>Testing:</strong> Umfassende Tests und Qualitätssicherung</li>
+                                    <li><strong>Launch:</strong> Deployment und Go-Live Unterstützung</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="general">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <div class="question-content">
+                                <h3>Welche Technologien verwenden Sie?</h3>
+                                <p>Moderne Tools für beste Ergebnisse</p>
+                            </div>
+                            <div class="question-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Wir arbeiten mit den neuesten und bewährtesten Technologien:</p>
+                                <div class="tech-categories">
+                                    <div class="tech-category">
+                                        <h4>Frontend</h4>
+                                        <span class="tech-tag">React</span>
+                                        <span class="tech-tag">Vue.js</span>
+                                        <span class="tech-tag">Next.js</span>
+                                        <span class="tech-tag">TypeScript</span>
+                                    </div>
+                                    <div class="tech-category">
+                                        <h4>Backend</h4>
+                                        <span class="tech-tag">Node.js</span>
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Laravel</span>
+                                        <span class="tech-tag">Express</span>
+                                    </div>
+                                    <div class="tech-category">
+                                        <h4>Mobile</h4>
+                                        <span class="tech-tag">React Native</span>
+                                        <span class="tech-tag">Flutter</span>
+                                        <span class="tech-tag">Swift</span>
+                                        <span class="tech-tag">Kotlin</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Development FAQ -->
+                    <div class="faq-item" data-category="development">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <div class="question-content">
+                                <h3>Wie lange dauert ein typisches Projekt?</h3>
+                                <p>Realistische Zeitschätzungen für Ihre Planung</p>
+                            </div>
+                            <div class="question-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Die Projektlaufzeit hängt von der Komplexität ab:</p>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-duration">2-4 Wochen</div>
+                                        <div class="timeline-project">Einfache Website (5-8 Seiten)</div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-duration">4-8 Wochen</div>
+                                        <div class="timeline-project">Komplexe Website mit CMS</div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-duration">8-16 Wochen</div>
+                                        <div class="timeline-project">E-Commerce oder Web-App</div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-duration">12-24 Wochen</div>
+                                        <div class="timeline-project">Mobile App oder Enterprise-Lösung</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="development">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <div class="question-content">
+                                <h3>Bieten Sie auch Wartung und Updates an?</h3>
+                                <p>Langfristige Betreuung Ihrer digitalen Lösungen</p>
+                            </div>
+                            <div class="question-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Ja, wir bieten umfassende Wartungs- und Support-Pakete:</p>
+                                <div class="support-features">
+                                    <div class="support-feature">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <div>
+                                            <h4>Sicherheits-Updates</h4>
+                                            <p>Regelmäßige Sicherheitspatches und Monitoring</p>
+                                        </div>
+                                    </div>
+                                    <div class="support-feature">
+                                        <i class="fas fa-tools"></i>
+                                        <div>
+                                            <h4>Technischer Support</h4>
+                                            <p>24/7 Support für kritische Probleme</p>
+                                        </div>
+                                    </div>
+                                    <div class="support-feature">
+                                        <i class="fas fa-chart-line"></i>
+                                        <div>
+                                            <h4>Performance-Optimierung</h4>
+                                            <p>Kontinuierliche Verbesserung der Performance</p>
+                                        </div>
+                                    </div>
+                                    <div class="support-feature">
+                                        <i class="fas fa-plus-circle"></i>
+                                        <div>
+                                            <h4>Feature-Updates</h4>
+                                            <p>Neue Funktionen und Verbesserungen</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support FAQ -->
+                    <div class="faq-item" data-category="support">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <div class="question-content">
+                                <h3>Wie ist die Kommunikation während des Projekts?</h3>
+                                <p>Transparenz und regelmäßige Updates</p>
+                            </div>
+                            <div class="question-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Kommunikation ist uns sehr wichtig. Wir bieten:</p>
+                                <ul>
+                                    <li><strong>Wöchentliche Updates:</strong> Regelmäßige Berichte über den Projektfortschritt</li>
+                                    <li><strong>Dedizierter Projektmanager:</strong> Ihr direkter Ansprechpartner</li>
+                                    <li><strong>Live-Demos:</strong> Regelmäßige Präsentationen der Fortschritte</li>
+                                    <li><strong>Flexible Kommunikationskanäle:</strong> E-Mail, Slack, Video-Calls</li>
+                                    <li><strong>Projekt-Dashboard:</strong> Transparenter Einblick in alle Projektphasen</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="support">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <div class="question-content">
+                                <h3>Was passiert nach dem Projekt-Launch?</h3>
+                                <p>Langfristige Betreuung und Weiterentwicklung</p>
+                            </div>
+                            <div class="question-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Nach dem Launch bieten wir:</p>
+                                <div class="post-launch">
+                                    <div class="launch-phase">
+                                        <div class="phase-number">1</div>
+                                        <div class="phase-content">
+                                            <h4>Go-Live Support</h4>
+                                            <p>24/7 Überwachung in den ersten Wochen</p>
+                                        </div>
+                                    </div>
+                                    <div class="launch-phase">
+                                        <div class="phase-number">2</div>
+                                        <div class="phase-content">
+                                            <h4>Training & Dokumentation</h4>
+                                            <p>Schulung Ihres Teams und umfassende Dokumentation</p>
+                                        </div>
+                                    </div>
+                                    <div class="launch-phase">
+                                        <div class="phase-number">3</div>
+                                        <div class="phase-content">
+                                            <h4>Wartungsvertrag</h4>
+                                            <p>Langfristige Betreuung und Updates</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing FAQ -->
+                    <div class="faq-item" data-category="pricing">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <div class="question-content">
+                                <h3>Wie werden die Kosten berechnet?</h3>
+                                <p>Transparente Preisgestaltung ohne versteckte Kosten</p>
+                            </div>
+                            <div class="question-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Unsere Preise basieren auf:</p>
+                                <div class="pricing-factors">
+                                    <div class="pricing-factor">
+                                        <i class="fas fa-list-check"></i>
+                                        <div>
+                                            <h4>Projektkomplexität</h4>
+                                            <p>Anzahl der Features und Seiten</p>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-factor">
+                                        <i class="fas fa-clock"></i>
+                                        <div>
+                                            <h4>Entwicklungszeit</h4>
+                                            <p>Geschätzte Arbeitsstunden</p>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-factor">
+                                        <i class="fas fa-cogs"></i>
+                                        <div>
+                                            <h4>Technologie-Stack</h4>
+                                            <p>Verwendete Technologien und Tools</p>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-factor">
+                                        <i class="fas fa-headset"></i>
+                                        <div>
+                                            <h4>Support-Level</h4>
+                                            <p>Gewünschter Support und Wartung</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pricing-note">
+                                    <i class="fas fa-info-circle"></i>
+                                    <p>Alle Preise sind transparent und ohne versteckte Kosten. Wir bieten kostenlose Beratung für eine genaue Kostenschätzung.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="pricing">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <div class="question-content">
+                                <h3>Gibt es eine kostenlose Beratung?</h3>
+                                <p>Unverbindliche Erstberatung für Ihr Projekt</p>
+                            </div>
+                            <div class="question-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Ja! Wir bieten eine kostenlose Erstberatung, die folgendes beinhaltet:</p>
+                                <div class="consultation-benefits">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <span>Projektanalyse und Zieldefinition</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-route"></i>
+                                        <span>Technische Lösungsvorschläge</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-calculator"></i>
+                                        <span>Kostenschätzung und Zeitplan</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-handshake"></i>
+                                        <span>Unverbindliche Beratung</span>
+                                    </div>
+                                </div>
+                                <div class="cta-section">
+                                    <p>Buchen Sie jetzt Ihre kostenlose Beratung!</p>
+                                    <button class="btn btn-primary" onclick="openBookingModal()">
+                                        <i class="fas fa-calendar-check"></i>
+                                        Termin buchen
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Bereit, Ihr Projekt zu starten?</h2>
+                <p>Kontaktieren Sie uns noch heute und lassen Sie uns besprechen, wie wir Ihre digitale Vision zum Leben erwecken können.</p>
+                <button class="btn btn-primary" onclick="openBookingModal()">Termin vereinbaren</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-sun"></i>
+                        <span>DigitaleLösungen</span>
+                    </div>
+                    <p class="footer-description">
+                        Wir schaffen innovative digitale Lösungen für moderne Unternehmen. 
+                        Von der Konzeption bis zur Umsetzung - Ihr Partner für digitale Transformation.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3 class="footer-title">Leistungen</h3>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Web-Entwicklung</a></li>
+                            <li><a href="#" class="footer-link">App-Entwicklung</a></li>
+                            <li><a href="#" class="footer-link">UI/UX Design</a></li>
+                            <li><a href="#" class="footer-link">SEO-Services</a></li>
+                            <li><a href="#" class="footer-link">E-Commerce</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-title">Unternehmen</h3>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Über uns</a></li>
+                            <li><a href="#" class="footer-link">Unser Team</a></li>
+                            <li><a href="#" class="footer-link">Karriere</a></li>
+                            <li><a href="#" class="footer-link">Blog</a></li>
+                            <li><a href="#" class="footer-link">Presse</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-title">Support</h3>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Hilfe-Center</a></li>
+                            <li><a href="#" class="footer-link">Dokumentation</a></li>
+                            <li><a href="#" class="footer-link">API-Referenz</a></li>
+                            <li><a href="#" class="footer-link">Status</a></li>
+                            <li><a href="#" class="footer-link">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-title">Rechtliches</h3>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Datenschutz</a></li>
+                            <li><a href="#" class="footer-link">Nutzungsbedingungen</a></li>
+                            <li><a href="#" class="footer-link">Impressum</a></li>
+                            <li><a href="#" class="footer-link">AGB</a></li>
+                            <li><a href="#" class="footer-link">Cookie-Richtlinie</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">
+                        &copy; 2024 DigitaleLösungen. Alle Rechte vorbehalten.
+                    </p>
+                    <div class="footer-bottom-links">
+                        <a href="#" class="footer-bottom-link">Datenschutz</a>
+                        <a href="#" class="footer-bottom-link">Nutzungsbedingungen</a>
+                        <a href="#" class="footer-bottom-link">Impressum</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
