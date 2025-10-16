@@ -31,9 +31,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Header scroll effect
-    const header = document.querySelector('.header');
-    let lastScrollTop = 0;
+// Exit Intent Popup Functions
+function closeExitIntentPopup() {
+    const popup = document.getElementById('exitIntentPopup');
+    if (popup) {
+        popup.classList.remove('active');
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 300);
+    }
+}
+
+// Header scroll effect
+const header = document.querySelector('.header');
+let lastScrollTop = 0;
     
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -487,66 +498,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create floating CTA
     createFloatingCTA();
     
-    // Add loading animation
-    const loader = document.createElement('div');
-    loader.id = 'page-loader';
-    loader.innerHTML = `
-        <div class="loader-content">
-            <div class="loader-spinner"></div>
-            <p>Laden...</p>
-        </div>
-    `;
-    
-    loader.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10000;
-        transition: opacity 0.5s ease;
-    `;
-    
-    document.body.appendChild(loader);
-    
-    // Remove loader after page is fully loaded
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            loader.style.opacity = '0';
-            setTimeout(() => {
-                loader.remove();
-            }, 500);
-        }, 1000);
-    });
-    
-    // Add loader spinner CSS
-    const loaderStyle = document.createElement('style');
-    loaderStyle.textContent = `
-        .loader-spinner {
-            width: 50px;
-            height: 50px;
-            border: 4px solid #f3f4f6;
-            border-top: 4px solid #6366f1;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-bottom: 1rem;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .loader-content {
-            text-align: center;
-            color: #6b7280;
-        }
-    `;
-    document.head.appendChild(loaderStyle);
 });
 
 // Client Logos Animation - Continuous running (no pause functionality)

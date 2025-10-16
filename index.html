@@ -1119,6 +1119,44 @@
         </div>
     </footer>
 
+    <!-- Exit Intent Popup -->
+    <div id="exitIntentPopup" class="exit-intent-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>Warten Sie! 🚀</h3>
+                <button class="close-popup" onclick="closeExitIntentPopup()">&times;</button>
+            </div>
+            <div class="popup-body">
+                <p>Verpassen Sie nicht Ihre <strong>kostenlose Beratung</strong>!</p>
+                <div class="popup-offer">
+                    <div class="offer-item">
+                        <i class="fas fa-check"></i>
+                        <span>Kostenlose Analyse Ihres Projekts</span>
+                    </div>
+                    <div class="offer-item">
+                        <i class="fas fa-check"></i>
+                        <span>Maßgeschneiderte Lösungsvorschläge</span>
+                    </div>
+                    <div class="offer-item">
+                        <i class="fas fa-check"></i>
+                        <span>Unverbindliches Angebot</span>
+                    </div>
+                </div>
+                <div class="popup-urgency">
+                    <span class="urgency-text">🔥 Nur noch wenige Termine diese Woche verfügbar!</span>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="btn btn-primary" onclick="openBookingModal(); closeExitIntentPopup();">
+                    Jetzt kostenlose Beratung buchen
+                </button>
+                <button class="btn btn-secondary" onclick="closeExitIntentPopup()">
+                    Nein, danke
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
