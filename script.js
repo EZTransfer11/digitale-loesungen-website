@@ -134,23 +134,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// FAQ Accordion functionality
-function toggleFAQ(element) {
-    const faqItem = element.closest('.faq-item');
-    if (!faqItem) return;
-    
-    const isActive = faqItem.classList.contains('active');
-    
-    // Close all FAQ items first
-    document.querySelectorAll('.faq-item').forEach(item => {
-        item.classList.remove('active');
-    });
-    
-    // Open clicked item if it wasn't active
-    if (!isActive) {
-        faqItem.classList.add('active');
-    }
-}
 
 
 // Project Filtering Functionality
@@ -440,11 +423,20 @@ function createFloatingCTA() {
     floatingCTA.innerHTML = '<i class="fas fa-calendar-check"></i> Termin buchen';
     floatingCTA.onclick = openBookingModal;
     
+    // Add to body
     document.body.appendChild(floatingCTA);
     
-    // Show after 3 seconds
+    // Show after 3 seconds with smooth animation
     setTimeout(() => {
         floatingCTA.style.display = 'flex';
+        floatingCTA.style.opacity = '0';
+        floatingCTA.style.transform = 'translateY(20px)';
+        
+        // Trigger animation
+        setTimeout(() => {
+            floatingCTA.style.opacity = '1';
+            floatingCTA.style.transform = 'translateY(0)';
+        }, 100);
     }, 3000);
 }
 
@@ -858,4 +850,22 @@ document.addEventListener('DOMContentLoaded', function() {
     initProjectShowcase();
     
 });
+
+// FAQ Accordion functionality - New Clean Version
+function toggleFAQ(element) {
+    const faqItem = element.closest('.faq-item');
+    if (!faqItem) return;
+    
+    const isActive = faqItem.classList.contains('active');
+    
+    // Close all FAQ items first
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    
+    // Open clicked item if it wasn't active
+    if (!isActive) {
+        faqItem.classList.add('active');
+    }
+}
 

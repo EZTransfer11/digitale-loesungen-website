@@ -15,7 +15,6 @@
             <div class="nav-container">
                 <div class="logo">
                     <i class="fas fa-sun"></i>
-                    <span>DigitaleLösungen</span>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home">Start</a></li>
@@ -24,8 +23,9 @@
                     <li><a href="#projects">Projekte</a></li>
                     <li><a href="#pricing">Preise</a></li>
                     <li><a href="#contact">Kontakt</a></li>
+                    <li><button class="cta-button mobile-cta" onclick="openBookingModal()">Termin buchen</button></li>
                 </ul>
-                <button class="cta-button" onclick="openBookingModal()">Termin buchen</button>
+                <button class="cta-button desktop-cta" onclick="openBookingModal()">Termin buchen</button>
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -51,9 +51,6 @@
         </div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="urgency-text"><span class="urgency-icon">🔥</span> Nur noch wenige Termine diese Woche verfügbar!</span>
-                </div>
                 <h1 class="hero-title">
                     Innovieren Sie Ihre digitale Welt mit uns
                 </h1>
@@ -684,8 +681,9 @@
     </section>
 
 
+
     <!-- FAQ Section -->
-    <section class="faq">
+    <section class="faq-section">
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">Häufige Fragen</div>
@@ -693,312 +691,181 @@
                 <p class="section-description">Hier finden Sie Antworten auf die häufigsten Fragen zu unseren Dienstleistungen und dem Entwicklungsprozess.</p>
             </div>
             
-            <div class="faq-content">
-                <div class="faq-grid">
-                    <!-- General FAQ -->
-                    <div class="faq-item" data-category="general">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <div class="question-content">
-                                <h3>Wie funktioniert der Entwicklungsprozess?</h3>
-                                <p>Unser strukturierter Ansatz für erfolgreiche Projekte</p>
-                            </div>
-                            <div class="question-icon">
-                                <i class="fas fa-plus"></i>
-                            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Wie funktioniert der Entwicklungsprozess?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-plus"></i>
                         </div>
-                        <div class="faq-answer">
-                            <div class="answer-content">
-                                <p>Unser Prozess beginnt mit einer kostenlosen Beratung, um Ihre Bedürfnisse zu verstehen. Anschließend folgen:</p>
-                                <ul>
-                                    <li><strong>Analyse & Planung:</strong> Detaillierte Projektanalyse und technische Spezifikation</li>
-                                    <li><strong>Design:</strong> UI/UX Design und Prototyping</li>
-                                    <li><strong>Entwicklung:</strong> Programmierung mit regelmäßigen Updates</li>
-                                    <li><strong>Testing:</strong> Umfassende Tests und Qualitätssicherung</li>
-                                    <li><strong>Launch:</strong> Deployment und Go-Live Unterstützung</li>
-                                </ul>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Unser Prozess beginnt mit einer kostenlosen Beratung, um Ihre Bedürfnisse zu verstehen. Anschließend folgen:</p>
+                        <ul>
+                            <li><strong>Analyse & Planung:</strong> Detaillierte Projektanalyse und technische Spezifikation</li>
+                            <li><strong>Design:</strong> UI/UX Design und Prototyping</li>
+                            <li><strong>Entwicklung:</strong> Programmierung mit regelmäßigen Updates</li>
+                            <li><strong>Testing:</strong> Umfassende Tests und Qualitätssicherung</li>
+                            <li><strong>Launch:</strong> Deployment und Go-Live Unterstützung</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Welche Technologien verwenden Sie?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Wir arbeiten mit den neuesten und bewährtesten Technologien:</p>
+                        <div class="tech-list">
+                            <div class="tech-group">
+                                <h4>Frontend</h4>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">TypeScript</span>
+                            </div>
+                            <div class="tech-group">
+                                <h4>Backend</h4>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">Express</span>
+                            </div>
+                            <div class="tech-group">
+                                <h4>Mobile</h4>
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Swift</span>
+                                <span class="tech-tag">Kotlin</span>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="faq-item" data-category="general">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <div class="question-content">
-                                <h3>Welche Technologien verwenden Sie?</h3>
-                                <p>Moderne Tools für beste Ergebnisse</p>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Wie lange dauert ein typisches Projekt?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Die Projektlaufzeit hängt von der Komplexität ab:</p>
+                        <div class="timeline-simple">
+                            <div class="timeline-item">
+                                <strong>2-4 Wochen</strong> - Einfache Website (5-8 Seiten)
                             </div>
-                            <div class="question-icon">
-                                <i class="fas fa-plus"></i>
+                            <div class="timeline-item">
+                                <strong>4-8 Wochen</strong> - Komplexe Website mit CMS
+                            </div>
+                            <div class="timeline-item">
+                                <strong>8-16 Wochen</strong> - E-Commerce oder Web-App
+                            </div>
+                            <div class="timeline-item">
+                                <strong>12-24 Wochen</strong> - Mobile App oder Enterprise-Lösung
                             </div>
                         </div>
-                        <div class="faq-answer">
-                            <div class="answer-content">
-                                <p>Wir arbeiten mit den neuesten und bewährtesten Technologien:</p>
-                                <div class="tech-categories">
-                                    <div class="tech-category">
-                                        <h4>Frontend</h4>
-                                        <span class="tech-tag">React</span>
-                                        <span class="tech-tag">Vue.js</span>
-                                        <span class="tech-tag">Next.js</span>
-                                        <span class="tech-tag">TypeScript</span>
-                                    </div>
-                                    <div class="tech-category">
-                                        <h4>Backend</h4>
-                                        <span class="tech-tag">Node.js</span>
-                                        <span class="tech-tag">Python</span>
-                                        <span class="tech-tag">Laravel</span>
-                                        <span class="tech-tag">Express</span>
-                                    </div>
-                                    <div class="tech-category">
-                                        <h4>Mobile</h4>
-                                        <span class="tech-tag">React Native</span>
-                                        <span class="tech-tag">Flutter</span>
-                                        <span class="tech-tag">Swift</span>
-                                        <span class="tech-tag">Kotlin</span>
-                                    </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Bieten Sie auch Wartung und Updates an?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ja, wir bieten umfassende Wartungs- und Support-Pakete:</p>
+                        <div class="support-list">
+                            <div class="support-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h4>Sicherheits-Updates</h4>
+                                    <p>Regelmäßige Sicherheitspatches und Monitoring</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Development FAQ -->
-                    <div class="faq-item" data-category="development">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <div class="question-content">
-                                <h3>Wie lange dauert ein typisches Projekt?</h3>
-                                <p>Realistische Zeitschätzungen für Ihre Planung</p>
-                            </div>
-                            <div class="question-icon">
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="faq-answer">
-                            <div class="answer-content">
-                                <p>Die Projektlaufzeit hängt von der Komplexität ab:</p>
-                                <div class="timeline">
-                                    <div class="timeline-item">
-                                        <div class="timeline-duration">2-4 Wochen</div>
-                                        <div class="timeline-project">Einfache Website (5-8 Seiten)</div>
-                                    </div>
-                                    <div class="timeline-item">
-                                        <div class="timeline-duration">4-8 Wochen</div>
-                                        <div class="timeline-project">Komplexe Website mit CMS</div>
-                                    </div>
-                                    <div class="timeline-item">
-                                        <div class="timeline-duration">8-16 Wochen</div>
-                                        <div class="timeline-project">E-Commerce oder Web-App</div>
-                                    </div>
-                                    <div class="timeline-item">
-                                        <div class="timeline-duration">12-24 Wochen</div>
-                                        <div class="timeline-project">Mobile App oder Enterprise-Lösung</div>
-                                    </div>
+                            <div class="support-item">
+                                <i class="fas fa-tools"></i>
+                                <div>
+                                    <h4>Technischer Support</h4>
+                                    <p>24/7 Support für kritische Probleme</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item" data-category="development">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <div class="question-content">
-                                <h3>Bieten Sie auch Wartung und Updates an?</h3>
-                                <p>Langfristige Betreuung Ihrer digitalen Lösungen</p>
+                            <div class="support-item">
+                                <i class="fas fa-chart-line"></i>
+                                <div>
+                                    <h4>Performance-Optimierung</h4>
+                                    <p>Kontinuierliche Verbesserung der Performance</p>
+                                </div>
                             </div>
-                            <div class="question-icon">
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="faq-answer">
-                            <div class="answer-content">
-                                <p>Ja, wir bieten umfassende Wartungs- und Support-Pakete:</p>
-                                <div class="support-features">
-                                    <div class="support-feature">
-                                        <i class="fas fa-shield-alt"></i>
-                                        <div>
-                                            <h4>Sicherheits-Updates</h4>
-                                            <p>Regelmäßige Sicherheitspatches und Monitoring</p>
-                                        </div>
-                                    </div>
-                                    <div class="support-feature">
-                                        <i class="fas fa-tools"></i>
-                                        <div>
-                                            <h4>Technischer Support</h4>
-                                            <p>24/7 Support für kritische Probleme</p>
-                                        </div>
-                                    </div>
-                                    <div class="support-feature">
-                                        <i class="fas fa-chart-line"></i>
-                                        <div>
-                                            <h4>Performance-Optimierung</h4>
-                                            <p>Kontinuierliche Verbesserung der Performance</p>
-                                        </div>
-                                    </div>
-                                    <div class="support-feature">
-                                        <i class="fas fa-plus-circle"></i>
-                                        <div>
-                                            <h4>Feature-Updates</h4>
-                                            <p>Neue Funktionen und Verbesserungen</p>
-                                        </div>
-                                    </div>
+                            <div class="support-item">
+                                <i class="fas fa-plus-circle"></i>
+                                <div>
+                                    <h4>Feature-Updates</h4>
+                                    <p>Neue Funktionen und Verbesserungen</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Support FAQ -->
-                    <div class="faq-item" data-category="support">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <div class="question-content">
-                                <h3>Wie ist die Kommunikation während des Projekts?</h3>
-                                <p>Transparenz und regelmäßige Updates</p>
-                            </div>
-                            <div class="question-icon">
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="faq-answer">
-                            <div class="answer-content">
-                                <p>Kommunikation ist uns sehr wichtig. Wir bieten:</p>
-                                <ul>
-                                    <li><strong>Wöchentliche Updates:</strong> Regelmäßige Berichte über den Projektfortschritt</li>
-                                    <li><strong>Dedizierter Projektmanager:</strong> Ihr direkter Ansprechpartner</li>
-                                    <li><strong>Live-Demos:</strong> Regelmäßige Präsentationen der Fortschritte</li>
-                                    <li><strong>Flexible Kommunikationskanäle:</strong> E-Mail, Slack, Video-Calls</li>
-                                    <li><strong>Projekt-Dashboard:</strong> Transparenter Einblick in alle Projektphasen</li>
-                                </ul>
-                            </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Wie ist die Kommunikation während des Projekts?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-plus"></i>
                         </div>
                     </div>
+                    <div class="faq-answer">
+                        <p>Kommunikation ist uns sehr wichtig. Wir bieten:</p>
+                        <ul>
+                            <li><strong>Wöchentliche Updates:</strong> Regelmäßige Berichte über den Projektfortschritt</li>
+                            <li><strong>Dedizierter Projektmanager:</strong> Ihr direkter Ansprechpartner</li>
+                            <li><strong>Live-Demos:</strong> Regelmäßige Präsentationen der Fortschritte</li>
+                            <li><strong>Flexible Kommunikationskanäle:</strong> E-Mail, Slack, Video-Calls</li>
+                            <li><strong>Projekt-Dashboard:</strong> Transparenter Einblick in alle Projektphasen</li>
+                        </ul>
+                    </div>
+                </div>
 
-                    <div class="faq-item" data-category="support">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <div class="question-content">
-                                <h3>Was passiert nach dem Projekt-Launch?</h3>
-                                <p>Langfristige Betreuung und Weiterentwicklung</p>
-                            </div>
-                            <div class="question-icon">
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="faq-answer">
-                            <div class="answer-content">
-                                <p>Nach dem Launch bieten wir:</p>
-                                <div class="post-launch">
-                                    <div class="launch-phase">
-                                        <div class="phase-number">1</div>
-                                        <div class="phase-content">
-                                            <h4>Go-Live Support</h4>
-                                            <p>24/7 Überwachung in den ersten Wochen</p>
-                                        </div>
-                                    </div>
-                                    <div class="launch-phase">
-                                        <div class="phase-number">2</div>
-                                        <div class="phase-content">
-                                            <h4>Training & Dokumentation</h4>
-                                            <p>Schulung Ihres Teams und umfassende Dokumentation</p>
-                                        </div>
-                                    </div>
-                                    <div class="launch-phase">
-                                        <div class="phase-number">3</div>
-                                        <div class="phase-content">
-                                            <h4>Wartungsvertrag</h4>
-                                            <p>Langfristige Betreuung und Updates</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Gibt es eine kostenlose Beratung?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-plus"></i>
                         </div>
                     </div>
-
-                    <!-- Pricing FAQ -->
-                    <div class="faq-item" data-category="pricing">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <div class="question-content">
-                                <h3>Wie werden die Kosten berechnet?</h3>
-                                <p>Transparente Preisgestaltung ohne versteckte Kosten</p>
+                    <div class="faq-answer">
+                        <p>Ja! Wir bieten eine kostenlose Erstberatung, die folgendes beinhaltet:</p>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Projektanalyse und Zieldefinition</span>
                             </div>
-                            <div class="question-icon">
-                                <i class="fas fa-plus"></i>
+                            <div class="benefit-item">
+                                <i class="fas fa-route"></i>
+                                <span>Technische Lösungsvorschläge</span>
                             </div>
-                        </div>
-                        <div class="faq-answer">
-                            <div class="answer-content">
-                                <p>Unsere Preise basieren auf:</p>
-                                <div class="pricing-factors">
-                                    <div class="pricing-factor">
-                                        <i class="fas fa-list-check"></i>
-                                        <div>
-                                            <h4>Projektkomplexität</h4>
-                                            <p>Anzahl der Features und Seiten</p>
-                                        </div>
-                                    </div>
-                                    <div class="pricing-factor">
-                                        <i class="fas fa-clock"></i>
-                                        <div>
-                                            <h4>Entwicklungszeit</h4>
-                                            <p>Geschätzte Arbeitsstunden</p>
-                                        </div>
-                                    </div>
-                                    <div class="pricing-factor">
-                                        <i class="fas fa-cogs"></i>
-                                        <div>
-                                            <h4>Technologie-Stack</h4>
-                                            <p>Verwendete Technologien und Tools</p>
-                                        </div>
-                                    </div>
-                                    <div class="pricing-factor">
-                                        <i class="fas fa-headset"></i>
-                                        <div>
-                                            <h4>Support-Level</h4>
-                                            <p>Gewünschter Support und Wartung</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pricing-note">
-                                    <i class="fas fa-info-circle"></i>
-                                    <p>Alle Preise sind transparent und ohne versteckte Kosten. Wir bieten kostenlose Beratung für eine genaue Kostenschätzung.</p>
-                                </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-calculator"></i>
+                                <span>Kostenschätzung und Zeitplan</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>Unverbindliche Beratung</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="faq-item" data-category="pricing">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <div class="question-content">
-                                <h3>Gibt es eine kostenlose Beratung?</h3>
-                                <p>Unverbindliche Erstberatung für Ihr Projekt</p>
-                            </div>
-                            <div class="question-icon">
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="faq-answer">
-                            <div class="answer-content">
-                                <p>Ja! Wir bieten eine kostenlose Erstberatung, die folgendes beinhaltet:</p>
-                                <div class="consultation-benefits">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-lightbulb"></i>
-                                        <span>Projektanalyse und Zieldefinition</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-route"></i>
-                                        <span>Technische Lösungsvorschläge</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-calculator"></i>
-                                        <span>Kostenschätzung und Zeitplan</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-handshake"></i>
-                                        <span>Unverbindliche Beratung</span>
-                                    </div>
-                                </div>
-                                <div class="cta-section">
-                                    <p>Buchen Sie jetzt Ihre kostenlose Beratung!</p>
-                                    <button class="btn btn-primary" onclick="openBookingModal()">
-                                        <i class="fas fa-calendar-check"></i>
-                                        Termin buchen
-                                    </button>
-                                </div>
-                            </div>
+                        <div class="faq-cta">
+                            <p>Buchen Sie jetzt Ihre kostenlose Beratung!</p>
+                            <button class="btn btn-primary" onclick="openBookingModal()">
+                                <i class="fas fa-calendar-check"></i>
+                                Termin buchen
+                            </button>
                         </div>
                     </div>
                 </div>
