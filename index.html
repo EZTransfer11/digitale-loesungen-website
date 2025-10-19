@@ -3,34 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digitale Lösungen - Moderne Webentwicklung, App-Entwicklung und System-Entwicklung für Unternehmen. Professionelle digitale Transformation.">
+    <meta name="keywords" content="Webentwicklung, App-Entwicklung, digitale Lösungen, React, Vue.js, Node.js">
+    <meta name="author" content="Digitale Lösungen">
     <title>Digitale Lösungen - Moderne Webentwicklung</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav">
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Hauptnavigation">
             <div class="nav-container">
-                <div class="logo">
-                    <i class="fas fa-sun"></i>
+                <div class="logo" role="img" aria-label="Digitale Lösungen Logo">
+                    <i class="fas fa-sun" aria-hidden="true"></i>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#home">Start</a></li>
-                    <li><a href="#services">Leistungen</a></li>
-                    <li><a href="#about">Über uns</a></li>
-                    <li><a href="#projects">Projekte</a></li>
-                    <li><a href="#pricing">Preise</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
-                    <li><button class="cta-button mobile-cta" onclick="openBookingModal()">Termin buchen</button></li>
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="#home" role="menuitem">Start</a></li>
+                    <li role="none"><a href="#services" role="menuitem">Leistungen</a></li>
+                    <li role="none"><a href="#about" role="menuitem">Über uns</a></li>
+                    <li role="none"><a href="#projects" role="menuitem">Projekte</a></li>
+                    <li role="none"><a href="#pricing" role="menuitem">Preise</a></li>
+                    <li role="none"><a href="#contact" role="menuitem">Kontakt</a></li>
+                    <li role="none"><button class="cta-button mobile-cta" onclick="openBookingModal()" aria-label="Termin buchen">Termin buchen</button></li>
                 </ul>
-                <button class="cta-button desktop-cta" onclick="openBookingModal()">Termin buchen</button>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <button class="cta-button desktop-cta" onclick="openBookingModal()" aria-label="Termin buchen">Termin buchen</button>
+                <button class="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-menu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
             </div>
         </nav>
     </header>
@@ -71,11 +75,6 @@
                 <div class="hero-buttons">
                     <button class="btn btn-primary" onclick="openBookingModal()">Kostenlose Beratung buchen</button>
                     <button class="btn btn-secondary" onclick="scrollToSection('about')">Mehr erfahren</button>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team working on digital solutions">
                 </div>
             </div>
         </div>
@@ -167,37 +166,44 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- CardSwap Section -->
+    <section class="cardswap-section">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge">Leistungen</div>
-                <h2 class="section-title">Wir bieten eine breite Palette von Design-Leistungen</h2>
+                <div class="section-badge">React Bits</div>
+                <h2 class="section-title">Interaktive Card-Animation</h2>
+                <p class="section-description">Moderne Card-Swap Animation mit GSAP für eine dynamische Benutzererfahrung.</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+            
+            <div class="cardswap-demo">
+                <div class="card-swap-container">
+                    <div class="card" data-card="1">
+                        <div class="card-content">
+                            <h3>App-Entwicklung</h3>
+                            <p>Moderne mobile Anwendungen mit React Native und Flutter für iOS und Android.</p>
+                            <div class="card-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                        </div>
                     </div>
-                    <h3>App-Entwicklung</h3>
-                    <p>Die beste Marketing-Lösung für Ihr Unternehmen finden</p>
-                    <button class="btn btn-outline" onclick="openBookingModal()">Beratung buchen</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
+                    <div class="card" data-card="2">
+                        <div class="card-content">
+                            <h3>Web-Entwicklung</h3>
+                            <p>Responsive Websites und Web-Apps mit React, Vue.js und modernen Frameworks.</p>
+                            <div class="card-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Web-Entwicklung</h3>
-                    <p>Die beste Marketing-Lösung für Ihr Unternehmen finden</p>
-                    <button class="btn btn-outline" onclick="openBookingModal()">Beratung buchen</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
+                    <div class="card" data-card="3">
+                        <div class="card-content">
+                            <h3>System-Entwicklung</h3>
+                            <p>Skalierbare Backend-Systeme mit Node.js, Python und Cloud-Technologien.</p>
+                            <div class="card-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                        </div>
                     </div>
-                    <h3>System-Entwicklung</h3>
-                    <p>Die beste Marketing-Lösung für Ihr Unternehmen finden</p>
-                    <button class="btn btn-outline" onclick="openBookingModal()">Beratung buchen</button>
                 </div>
             </div>
         </div>

@@ -1,5 +1,23 @@
-// Smooth scrolling for navigation links
+/* ========================================
+   MAIN INITIALIZATION
+   ======================================== */
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 Digitale Lösungen Website initialisiert');
+    
+    // Initialize all components
+    initNavigation();
+    initMobileMenu();
+    initHeaderScroll();
+    initAnimations();
+    initCardSwap();
+    initStatsCounter();
+    initFloatingCTA();
+});
+
+/* ========================================
+   NAVIGATION FUNCTIONS
+   ======================================== */
+function initNavigation() {
     // Smooth scrolling for anchor links
     const navLinks = document.querySelectorAll('a[href^="#"]');
     navLinks.forEach(link => {
@@ -19,7 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+}
 
+function initMobileMenu() {
     // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -30,52 +50,60 @@ document.addEventListener('DOMContentLoaded', function() {
             hamburger.classList.toggle('active');
         });
     }
-
-
-// Header scroll effect with hide/show functionality - Optimized
-const header = document.querySelector('.header');
-let lastScrollTop = 0;
-let ticking = false;
-let scrollTimeout;
-
-function updateHeader() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
-    
-    // Only hide header when scrolling down and past 100px
-    if (scrollDirection === 'down' && scrollTop > 100) {
-        header.style.transform = 'translateY(-100%)';
-        header.style.transition = 'transform 0.3s ease-in-out';
-    } 
-    // Show header when scrolling up or at the top
-    else if (scrollDirection === 'up' || scrollTop <= 100) {
-        header.style.transform = 'translateY(0)';
-        header.style.transition = 'transform 0.3s ease-in-out';
-    }
-    
-    // Update background opacity based on scroll position
-    if (scrollTop > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
-        header.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.15)';
-        header.style.border = '1px solid rgba(255, 255, 255, 0.3)';
-    } else {
-        header.style.background = 'rgba(255, 255, 255, 0.8)';
-        header.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.1)';
-        header.style.border = '1px solid rgba(255, 255, 255, 0.2)';
-    }
-    
-    lastScrollTop = scrollTop;
-    ticking = false;
 }
 
-// Optimized scroll handler with throttling
-window.addEventListener('scroll', function() {
-    if (!ticking) {
-        requestAnimationFrame(updateHeader);
-        ticking = true;
+/* ========================================
+   HEADER SCROLL EFFECTS
+   ======================================== */
+function initHeaderScroll() {
+    const header = document.querySelector('.header');
+    let lastScrollTop = 0;
+    let ticking = false;
+    
+    function updateHeader() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
+        
+        // Only hide header when scrolling down and past 100px
+        if (scrollDirection === 'down' && scrollTop > 100) {
+            header.style.transform = 'translateY(-100%)';
+            header.style.transition = 'transform 0.3s ease-in-out';
+        } 
+        // Show header when scrolling up or at the top
+        else if (scrollDirection === 'up' || scrollTop <= 100) {
+            header.style.transform = 'translateY(0)';
+            header.style.transition = 'transform 0.3s ease-in-out';
+        }
+        
+        // Update background opacity based on scroll position
+        if (scrollTop > 100) {
+            header.style.background = 'rgba(255, 255, 255, 0.95)';
+            header.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.15)';
+            header.style.border = '1px solid rgba(255, 255, 255, 0.3)';
+        } else {
+            header.style.background = 'rgba(255, 255, 255, 0.8)';
+            header.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.1)';
+            header.style.border = '1px solid rgba(255, 255, 255, 0.2)';
+        }
+        
+        lastScrollTop = scrollTop;
+        ticking = false;
     }
-}, { passive: true });
+    
+    // Optimized scroll handler with throttling
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    }, { passive: true });
+}
 
+/* ========================================
+   ANIMATION FUNCTIONS
+   ======================================== */
+
+function initAnimations() {
     // Intersection Observer for animations
     const observerOptions = {
         threshold: 0.1,
@@ -92,14 +120,16 @@ window.addEventListener('scroll', function() {
     }, observerOptions);
 
     // Observe elements for animation
-    const animateElements = document.querySelectorAll('.service-card, .testimonial-card, .pricing-card, .stat-item');
+    const animateElements = document.querySelectorAll('.testimonial-card, .pricing-card, .stat-item');
     animateElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+}
 
+function initStatsCounter() {
     // Counter animation for stats
     const statNumbers = document.querySelectorAll('.stat-number');
     const statsObserver = new IntersectionObserver(function(entries) {
@@ -132,7 +162,160 @@ window.addEventListener('scroll', function() {
             element.textContent = Math.floor(current) + suffix;
         }, 16);
     }
-});
+}
+
+function initCardSwap() {
+    const container = document.querySelector('.card-swap-container');
+    if (!container || typeof gsap === 'undefined') return;
+    
+    const cards = container.querySelectorAll('.card');
+    if (cards.length < 2) return;
+    
+    // Configuration
+    const config = {
+        cardDistance: 60,
+        verticalDistance: 70,
+        delay: 3000,
+        skewAmount: 6,
+        easing: 'elastic.out(0.6,0.9)',
+        durDrop: 2,
+        durMove: 2,
+        durReturn: 2,
+        promoteOverlap: 0.9,
+        returnDelay: 0.05
+    };
+    
+    // Create slots for cards
+    const makeSlot = (i, distX, distY, total) => ({
+        x: i * distX,
+        y: -i * distY,
+        z: -i * distX * 1.5,
+        zIndex: total - i
+    });
+    
+    // Position card in slot
+    const placeNow = (el, slot, skew) => {
+        gsap.set(el, {
+            x: slot.x,
+            y: slot.y,
+            z: slot.z,
+            xPercent: -50,
+            yPercent: -50,
+            skewY: skew,
+            transformOrigin: 'center center',
+            zIndex: slot.zIndex,
+            force3D: true
+        });
+    };
+    
+    // Initialize card positions
+    const total = cards.length;
+    cards.forEach((card, i) => {
+        placeNow(card, makeSlot(i, config.cardDistance, config.verticalDistance, total), config.skewAmount);
+    });
+    
+    // Card order management
+    let order = Array.from({ length: cards.length }, (_, i) => i);
+    let currentTimeline = null;
+    let intervalId = null;
+    
+    // Swap animation function
+    const swap = () => {
+        if (order.length < 2) return;
+        
+        const [front, ...rest] = order;
+        const frontCard = cards[front];
+        const tl = gsap.timeline();
+        currentTimeline = tl;
+        
+        // Drop front card
+        tl.to(frontCard, {
+            y: '+=500',
+            duration: config.durDrop,
+            ease: config.easing
+        });
+        
+        // Promote other cards
+        tl.addLabel('promote', `-=${config.durDrop * config.promoteOverlap}`);
+        rest.forEach((idx, i) => {
+            const card = cards[idx];
+            const slot = makeSlot(i, config.cardDistance, config.verticalDistance, cards.length);
+            tl.set(card, { zIndex: slot.zIndex }, 'promote');
+            tl.to(card, {
+                x: slot.x,
+                y: slot.y,
+                z: slot.z,
+                duration: config.durMove,
+                ease: config.easing
+            }, `promote+=${i * 0.15}`);
+        });
+        
+        // Return front card to back
+        const backSlot = makeSlot(cards.length - 1, config.cardDistance, config.verticalDistance, cards.length);
+        tl.addLabel('return', `promote+=${config.durMove * config.returnDelay}`);
+        tl.call(() => {
+            gsap.set(frontCard, { zIndex: backSlot.zIndex });
+        }, undefined, 'return');
+        tl.to(frontCard, {
+            x: backSlot.x,
+            y: backSlot.y,
+            z: backSlot.z,
+            duration: config.durReturn,
+            ease: config.easing
+        }, 'return');
+        
+        // Update order
+        tl.call(() => {
+            order = [...rest, front];
+        });
+    };
+    
+    // Start animation
+    swap();
+    intervalId = setInterval(swap, config.delay);
+    
+    
+    // Card click handlers
+    cards.forEach((card, index) => {
+        card.addEventListener('click', () => {
+            console.log(`Card ${index + 1} clicked`);
+            // You can add custom click behavior here
+        });
+    });
+}
+
+function initFloatingCTA() {
+    // Floating CTA Button
+    function createFloatingCTA() {
+        const floatingCTA = document.createElement('button');
+        floatingCTA.className = 'floating-cta';
+        floatingCTA.innerHTML = '<i class="fas fa-calendar-check"></i> Termin buchen';
+        floatingCTA.onclick = openBookingModal;
+        
+        // Add to body
+        document.body.appendChild(floatingCTA);
+        
+        // Show after 3 seconds with smooth animation
+        setTimeout(() => {
+            floatingCTA.style.display = 'flex';
+            floatingCTA.style.opacity = '0';
+            floatingCTA.style.transform = 'translateY(20px)';
+            
+            // Trigger animation
+            setTimeout(() => {
+                floatingCTA.style.opacity = '1';
+                floatingCTA.style.transform = 'translateY(0)';
+            }, 100);
+        }, 3000);
+    }
+    
+    // Create floating CTA
+    createFloatingCTA();
+}
+
+/* ========================================
+   UTILITY FUNCTIONS
+   ======================================== */
 
 
 
@@ -440,13 +623,140 @@ function createFloatingCTA() {
     }, 3000);
 }
 
-// Initialize everything when DOM is loaded
+// CardSwap Animation - React Bits Component Implementation
+function initCardSwap() {
+    const container = document.querySelector('.card-swap-container');
+    if (!container || typeof gsap === 'undefined') return;
+    
+    const cards = container.querySelectorAll('.card');
+    if (cards.length < 2) return;
+    
+    // Configuration
+    const config = {
+        cardDistance: 60,
+        verticalDistance: 70,
+        delay: 3000,
+        skewAmount: 6,
+        easing: 'elastic.out(0.6,0.9)',
+        durDrop: 2,
+        durMove: 2,
+        durReturn: 2,
+        promoteOverlap: 0.9,
+        returnDelay: 0.05
+    };
+    
+    // Create slots for cards
+    const makeSlot = (i, distX, distY, total) => ({
+        x: i * distX,
+        y: -i * distY,
+        z: -i * distX * 1.5,
+        zIndex: total - i
+    });
+    
+    // Position card in slot
+    const placeNow = (el, slot, skew) => {
+        gsap.set(el, {
+            x: slot.x,
+            y: slot.y,
+            z: slot.z,
+            xPercent: -50,
+            yPercent: -50,
+            skewY: skew,
+            transformOrigin: 'center center',
+            zIndex: slot.zIndex,
+            force3D: true
+        });
+    };
+    
+    // Initialize card positions
+    const total = cards.length;
+    cards.forEach((card, i) => {
+        placeNow(card, makeSlot(i, config.cardDistance, config.verticalDistance, total), config.skewAmount);
+    });
+    
+    // Card order management
+    let order = Array.from({ length: cards.length }, (_, i) => i);
+    let currentTimeline = null;
+    let intervalId = null;
+    
+    // Swap animation function
+    const swap = () => {
+        if (order.length < 2) return;
+        
+        const [front, ...rest] = order;
+        const frontCard = cards[front];
+        const tl = gsap.timeline();
+        currentTimeline = tl;
+        
+        // Drop front card
+        tl.to(frontCard, {
+            y: '+=500',
+            duration: config.durDrop,
+            ease: config.easing
+        });
+        
+        // Promote other cards
+        tl.addLabel('promote', `-=${config.durDrop * config.promoteOverlap}`);
+        rest.forEach((idx, i) => {
+            const card = cards[idx];
+            const slot = makeSlot(i, config.cardDistance, config.verticalDistance, cards.length);
+            tl.set(card, { zIndex: slot.zIndex }, 'promote');
+            tl.to(card, {
+                x: slot.x,
+                y: slot.y,
+                z: slot.z,
+                duration: config.durMove,
+                ease: config.easing
+            }, `promote+=${i * 0.15}`);
+        });
+        
+        // Return front card to back
+        const backSlot = makeSlot(cards.length - 1, config.cardDistance, config.verticalDistance, cards.length);
+        tl.addLabel('return', `promote+=${config.durMove * config.returnDelay}`);
+        tl.call(() => {
+            gsap.set(frontCard, { zIndex: backSlot.zIndex });
+        }, undefined, 'return');
+        tl.to(frontCard, {
+            x: backSlot.x,
+            y: backSlot.y,
+            z: backSlot.z,
+            duration: config.durReturn,
+            ease: config.easing
+        }, 'return');
+        
+        // Update order
+        tl.call(() => {
+            order = [...rest, front];
+        });
+    };
+    
+    // Start animation
+    swap();
+    intervalId = setInterval(swap, config.delay);
+    
+    
+    // Card click handlers
+    cards.forEach((card, index) => {
+        card.addEventListener('click', () => {
+            console.log(`Card ${index + 1} clicked`);
+            // You can add custom click behavior here
+        });
+    });
+}
+
+// Initialize CardSwap when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Digitale Lösungen Website erfolgreich geladen!');
-    
-    // Create floating CTA
-    createFloatingCTA();
-    
+    // Wait for GSAP to load
+    if (typeof gsap !== 'undefined') {
+        initCardSwap();
+    } else {
+        // Retry after a short delay
+        setTimeout(() => {
+            if (typeof gsap !== 'undefined') {
+                initCardSwap();
+            }
+        }, 1000);
+    }
 });
 
 // Client Logos Animation - Continuous running (no pause functionality)

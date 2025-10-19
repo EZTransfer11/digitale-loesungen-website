@@ -1,4 +1,6 @@
-/* Reset and Base Styles */
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +8,9 @@
 }
 
 :root {
-    /* Light Mode Color Palette */
+    /* ========================================
+       COLOR PALETTE
+       ======================================== */
     --primary-color: #6366f1;
     --primary-light: #a5b4fc;
     --primary-dark: #4338ca;
@@ -26,7 +30,9 @@
     --gray-800: #1f2937;
     --gray-900: #111827;
     
-    /* Typography */
+    /* ========================================
+       TYPOGRAPHY
+       ======================================== */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
@@ -38,7 +44,9 @@
     --font-size-4xl: 2.25rem;
     --font-size-5xl: 3rem;
     
-    /* Spacing */
+    /* ========================================
+       SPACING SYSTEM
+       ======================================== */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
@@ -47,13 +55,17 @@
     --spacing-2xl: 4rem;
     --spacing-3xl: 6rem;
     
-    /* Shadows */
+    /* ========================================
+       SHADOWS & EFFECTS
+       ======================================== */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     
-    /* Border Radius */
+    /* ========================================
+       BORDER RADIUS
+       ======================================== */
     --radius-sm: 0.375rem;
     --radius-md: 0.5rem;
     --radius-lg: 0.75rem;
@@ -78,69 +90,6 @@ body {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     will-change: scroll-position;
-}
-
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    /* Light Mode Color Palette */
-    --primary-color: #6366f1;
-    --primary-light: #a5b4fc;
-    --primary-dark: #4338ca;
-    --secondary-color: #f59e0b;
-    --accent-color: #10b981;
-    
-    /* Neutral Colors */
-    --white: #ffffff;
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-300: #d1d5db;
-    --gray-400: #9ca3af;
-    --gray-500: #6b7280;
-    --gray-600: #4b5563;
-    --gray-700: #374151;
-    --gray-800: #1f2937;
-    --gray-900: #111827;
-    
-    /* Typography */
-    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-size-xs: 0.75rem;
-    --font-size-sm: 0.875rem;
-    --font-size-base: 1rem;
-    --font-size-lg: 1.125rem;
-    --font-size-xl: 1.25rem;
-    --font-size-2xl: 1.5rem;
-    --font-size-3xl: 1.875rem;
-    --font-size-4xl: 2.25rem;
-    --font-size-5xl: 3rem;
-    
-    /* Spacing */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
-    --spacing-2xl: 4rem;
-    --spacing-3xl: 6rem;
-    
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    
-    /* Border Radius */
-    --radius-sm: 0.375rem;
-    --radius-md: 0.5rem;
-    --radius-lg: 0.75rem;
-    --radius-xl: 1rem;
-    --radius-2xl: 1.5rem;
 }
 
 .container {
@@ -523,16 +472,16 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .hero {
-        height: 80vh;
-        min-height: 600px;
+        height: 100vh;
+        min-height: 100vh;
         padding: 100px 0 40px 0; /* Mehr Platz oben, weniger unten */
     }
     
     .hero .container {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: var(--spacing-lg);
-        max-height: calc(80vh - 140px); /* Mehr Platz für Buttons */
+        gap: var(--spacing-sm);
+        max-height: calc(100vh - 140px); /* Mehr Platz für Buttons */
     }
     
     .shape-1, .shape-2, .shape-3, .shape-4, .shape-5, .shape-6, .shape-7, .shape-8 {
@@ -551,13 +500,14 @@ body {
 
 @media (max-width: 480px) {
     .hero {
-        height: 70vh;
-        min-height: 500px;
+        height: 100vh;
+        min-height: 100vh;
         padding: 80px 0 30px 0; /* Mehr Platz oben, weniger unten */
     }
     
     .hero .container {
-        max-height: calc(70vh - 110px); /* Mehr Platz für Buttons */
+        max-height: calc(100vh - 110px); /* Mehr Platz für Buttons */
+        gap: var(--spacing-xs);
     }
     
     .shape-1, .shape-2, .shape-3, .shape-4, .shape-5, .shape-6, .shape-7, .shape-8 {
@@ -632,7 +582,7 @@ body {
 
 .hero-image img {
     width: 100%;
-    height: 400px;
+    height: auto;
     object-fit: cover;
 }
 
@@ -771,69 +721,174 @@ body {
     color: var(--secondary-color);
 }
 
-/* Services Section */
-.services {
+/* CardSwap Section */
+.cardswap-section {
     padding: var(--spacing-3xl) 0;
-    background: var(--gray-50);
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: var(--spacing-3xl);
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-xl);
-}
-
-.service-card {
     background: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.cardswap-demo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    position: relative;
+    margin-top: 0px;
+    padding-bottom: var(--spacing-2xl);
+}
+
+.card-swap-container {
+    position: relative;
+    width: 550px;
+    height: 440px;
+    perspective: 900px;
+    transform: translate(-20%, 20%);
+    transform-origin: bottom right;
+    margin: 0 auto;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 550px;
+    height: 440px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    transform-style: preserve-3d;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
     padding: var(--spacing-xl);
-    border-radius: var(--radius-xl);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
-    border: 1px solid var(--gray-200);
 }
 
-.service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--primary-light);
+.card-content h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--white);
 }
 
-.service-icon {
+.card-content p {
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.card-icon {
     width: 80px;
     height: 80px;
-    background: var(--primary-color);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto var(--spacing-md);
+    margin-top: var(--spacing-md);
 }
 
-.service-icon i {
-    font-size: var(--font-size-2xl);
+.card-icon i {
+    font-size: var(--font-size-3xl);
     color: var(--white);
 }
 
-.service-card h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 600;
-    color: var(--gray-900);
-    margin-bottom: var(--spacing-sm);
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .cardswap-demo {
+        min-height: 300px;
+        margin-top: 0px;
+        padding-bottom: var(--spacing-xl);
+    }
+    
+    .card-swap-container {
+        transform: scale(0.75) translate(-20%, 20%) !important;
+        width: 440px;
+        height: 352px;
+        margin: 0 auto;
+        left: auto;
+        right: auto;
+    }
+    
+    .card {
+        width: 440px;
+        height: 352px;
+    }
+    
+    .card-content {
+        padding: var(--spacing-lg);
+    }
+    
+    .card-content h3 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .card-content p {
+        font-size: var(--font-size-base);
+    }
 }
 
-.service-card p {
-    color: var(--gray-600);
-    margin-bottom: var(--spacing-lg);
-    line-height: 1.6;
+@media (max-width: 480px) {
+    .cardswap-demo {
+        min-height: 250px;
+        margin-top: 0px;
+        padding-bottom: var(--spacing-lg);
+    }
+    
+    .card-swap-container {
+        transform: scale(0.55) translate(-20%, 20%) !important;
+        width: 330px;
+        height: 264px;
+        margin: 0 auto;
+        left: auto;
+        right: auto;
+    }
+    
+    .card {
+        width: 330px;
+        height: 264px;
+    }
+    
+    .card-content {
+        padding: var(--spacing-md);
+    }
+    
+    .card-content h3 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .card-content p {
+        font-size: var(--font-size-sm);
+    }
+    
+    .card-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .card-icon i {
+        font-size: var(--font-size-2xl);
+    }
 }
-
-/* Projects Section */
 .projects {
     padding: var(--spacing-3xl) 0;
     background: var(--white);
@@ -2713,6 +2768,8 @@ input:disabled + .slider {
     
     .hero {
         padding: calc(70px + var(--spacing-sm)) 0 var(--spacing-sm);
+        height: 100vh;
+        min-height: 100vh;
     }
     
     .hero-title {
